@@ -10,11 +10,8 @@
         }
     ],
     "require": {
-        "twitter/bootstrap": "3.0.0",
+        "twitter/bootstrap": "3.0.*",
         "components/jquery": "1.10.*"
-    },
-    "config": {
-        "component-dir": "public"
     },
     "autoload": {
         "psr-0": {"Symfony\\Bootstrap": "src/"}
