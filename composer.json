@@ -1,5 +1,5 @@
 {
-    "name": "cbc/bootstrap",
+    "name": "cbc/symfony2-bootstrap",
     "type": "package",
     "description": "Integrates Bootstrap 3 with Symfony 2.3+.",
     "license": "MIT",
