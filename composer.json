@@ -10,7 +10,7 @@
         }
     ],
     "config": {
-        "vendor-dir": "vendor/symfony/bootstrap"
+        "component-dir": "vendor/components"
     },
     "require": {
         "twitter/bootstrap": "3.0.*",
