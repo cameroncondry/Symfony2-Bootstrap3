@@ -9,6 +9,9 @@
             "email": "ccondry2@gmail.com"
         }
     ],
+    "config": {
+        "vendor-dir": "vendor/symfony/bootstrap"
+    },
     "require": {
         "twitter/bootstrap": "3.0.*",
         "components/jquery": "1.10.*"
