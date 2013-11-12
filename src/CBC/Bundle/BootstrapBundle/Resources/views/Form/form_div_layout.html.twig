@@ -3,47 +3,55 @@
 {# Inject templates into "~/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig" #}
 
 {% block form_row %}
-	{% spaceless %}
-	    {% set error = (errors|length > 0) ? ' text-danger' : '' %}
-		<div class="form-group{{ error }}">
-			{{ form_label(form, null, {'label_attr': {'class': 'control-label'}}) }}
-			{{ form_errors(form) }}
-			{{ form_widget(form, {'attr': {'class': 'form-control'}}) }}
-		</div>
-	{% endspaceless %}
+{% spaceless %}
+    {% set error = (errors|length > 0) ? ' text-danger' : '' %}
+	<div class="form-group{{ error }}">
+		{{ form_label(form, null, {'label_attr': {'class': 'control-label'}}) }}
+		{{ form_errors(form) }}
+		{{ form_widget(form, {'attr': {'class': 'form-control'}}) }}
+	</div>
+{% endspaceless %}
 {% endblock form_row %}
 
 {% block form_errors %}
-	{% spaceless %}
-		{% if errors|length > 0 %}
-			{% for error in errors %}
-			<div class="alert alert-danger">{{ error.message }}</div>
-			{% endfor %}
-		{% endif %}
-	{% endspaceless %}
+{% spaceless %}
+	{% if errors|length > 0 %}
+		{% for error in errors %}
+		<div class="alert alert-danger">{{ error.message }}</div>
+		{% endfor %}
+	{% endif %}
+{% endspaceless %}
 {% endblock form_errors %}
 
+{% block button_row %}
+{% spaceless %}
+    <div class="form-group">
+        {{ form_widget(form) }}
+    </div>
+{% endspaceless %}
+{% endblock button_row %}
+
 {% block button_widget %}
-	{% spaceless %}
-		{% if label is empty %}
-			{% set label = name|humanize %}
-		{% endif %}
-		<button class="btn {{ class|default('btn-default') }}" type="{{ type|default('button') }}" {{ block('button_attributes') }}>{{ label|trans({}, translation_domain) }}</button>
-	{% endspaceless %}
+{% spaceless %}
+	{% if label is empty %}
+		{% set label = name|humanize %}
+	{% endif %}
+	<button class="btn {{ class|default('btn-default') }}" type="{{ type|default('button') }}" {{ block('button_attributes') }}>{{ label|trans({}, translation_domain) }}</button>
+{% endspaceless %}
 {% endblock button_widget %}
 
 {% block submit_widget %}
-	{% spaceless %}
-		{% set type = type|default('submit') %}
-		{% set class = class|default('btn-primary') %}
-		{{ block('button_widget') }}
-	{% endspaceless %}
+{% spaceless %}
+	{% set type = type|default('submit') %}
+	{% set class = class|default('btn-primary') %}
+	{{ block('button_widget') }}
+{% endspaceless %}
 {% endblock submit_widget %}
 
 {% block reset_widget %}
-	{% spaceless %}
-		{% set type = type|default('reset') %}
-		{% set class = class|default('btn-danger') %}
-		{{ block('button_widget') }}
-	{% endspaceless %}
+{% spaceless %}
+	{% set type = type|default('reset') %}
+	{% set class = class|default('btn-danger') %}
+	{{ block('button_widget') }}
+{% endspaceless %}
 {% endblock reset_widget %}
