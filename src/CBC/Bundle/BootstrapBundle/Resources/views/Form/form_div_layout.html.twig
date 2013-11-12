@@ -28,7 +28,7 @@
 		{% if label is empty %}
 			{% set label = name|humanize %}
 		{% endif %}
-		<button class="btn {{ class|default('') }}" type="{{ type|default('button') }}" {{ block('button_attributes') }}>{{ label|trans({}, translation_domain) }}</button>
+		<button class="btn {{ class|default('btn-default') }}" type="{{ type|default('button') }}" {{ block('button_attributes') }}>{{ label|trans({}, translation_domain) }}</button>
 	{% endspaceless %}
 {% endblock button_widget %}
 
