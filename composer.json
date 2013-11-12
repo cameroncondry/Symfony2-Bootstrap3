@@ -14,6 +14,6 @@
         "components/jquery": "1.10.*"
     },
     "autoload": {
-        "psr-0": {"Symfony\\Bundle\\Bootstrap": "src/"}
+        "psr-0": {"Symfony\\Bundle\\BootstrapBundle": "src/"}
     }
 }
