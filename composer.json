@@ -9,9 +9,6 @@
             "email": "ccondry2@gmail.com"
         }
     ],
-    "config": {
-        "component-dir": "vendor/components"
-    },
     "require": {
         "twitter/bootstrap": "3.0.*",
         "components/jquery": "1.10.*"
