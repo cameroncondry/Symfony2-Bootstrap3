@@ -1,6 +1,6 @@
 <?php
 
-namespace Symfony\Bundle\BootstrapBundle;
+namespace CBC\Bundle\BootstrapBundle;
 
 use Symfony\Component\Console\Application;
 use Symfony\Component\Filesystem\Filesystem;
