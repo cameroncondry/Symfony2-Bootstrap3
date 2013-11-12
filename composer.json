@@ -1,0 +1,22 @@
+{
+    "name": "symfony/bootstrap",
+    "type": "package",
+    "description": "Integrates Bootstrap 3 with Symfony 2.3+.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cameron Condry",
+            "email": "ccondry2@gmail.com"
+        }
+    ],
+    "require": {
+        "twitter/bootstrap": "3.0.0",
+        "components/jquery": "1.10.*"
+    },
+    "config": {
+        "component-dir": "public"
+    },
+    "autoload": {
+        "psr-0": {"Symfony\\Bootstrap": "src/"}
+    }
+}
