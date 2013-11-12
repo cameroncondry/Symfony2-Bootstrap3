@@ -1,7 +1,7 @@
 Symfony2-Bootstrap3
 ===================
 
-BootstrapBundle looks to integrate [Bootstrap 3](http://getbootstrap.com/) with a Symfony2 v2.3+ project.
+BootstrapBundle looks to integrate [Bootstrap 3](http://getbootstrap.com/) with a Symfony2 v2.3+ project. The base implementation hooks into the twig system, overridding the form templates to use base Bootstrap 3 styles. The Bundle also includes jquery from a CDN with a local fallback.
 
 Installation
 -------------------
