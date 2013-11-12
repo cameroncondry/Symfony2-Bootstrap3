@@ -1,42 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-{% block meta %}{% include 'PLTWBootstrapBundle:Base:meta.html.twig' %}{% endblock %}
-{% block stylesheets %}{% include 'PLTWBootstrapBundle:Base:css.html.twig' %}{% endblock %}
-<title>{% block title "PLTW Bootstrap 3 Integration" %}</title>
+{% block meta %}{% include 'BootstrapBundle:Base:meta.html.twig' %}{% endblock %}
+{% block stylesheets %}{% include 'BootstrapBundle:Base:css.html.twig' %}{% endblock %}
+<title>{% block title "Bootstrap 3 Symfony Integration" %}</title>
 </head>
 <body>
-{% block body %}
-
-    <div id="wrap">
-        {% block header %}{% endblock %}
-        {% block page %}
-            <div class="container">
-                {% block page_header %}
-                <div class="page-header">
-                    {% block page_header_content '<h1>PLTW Bootstrap 3 Integration</h1>' %}
-                </div>
-                {% endblock %}
-                {% block page_content %}
-                    <p class="lead">This is the base template, please be sure to overwrite "{&percnt;  block content &percnt;}" in your template.</p>
-                    <p><a href="http://getbootstrap.com/getting-started/" target="_blank">Visit Bootstrap 3.0 for examples.</a></p>
-                    <p><strong>Base templates</strong>:
-                        <ul>
-                            <li>"%kernel.root_dir%/../vendor/twitter/bootstrap/examples/"</li>
-                            <li>"%kernel.root_dir%/../vendor/symfony/bootstrap/src/Symfony/Bundle/BootstrapBundle/"</li>
-                        </ul>
-                    </p>
-                {% endblock %}
-            </div>
-        {% endblock %}
-    </div>
-    {% block footer %}
-        <footer>
-        {% block footer_content %}<p class="text-muted credit text-center">Copyright &copy; {{ "now"|date("Y") }} PLTW Bootstrap 3 Integration</p>{% endblock %}
-        </footer>
+<div id="wrap">
+    {% block nav %}{% endblock %}
+    {% block body %}
+        <div class="container">
+            {% block header '<h1>Bootstrap 3 Symfony Integration</h1>' %}
+            {% block page %}{% include 'BootstrapBundle:Base:body.html.twig' %}{% endblock %}
+        </div>
     {% endblock %}
+</div>
 
-{% endblock %}
-{% block javascripts %}{% include 'PLTWBootstrapBundle:Base:js.html.twig' %}{% endblock %}
+{% block footer %}{% include 'BootstrapBundle:Base:footer.html.twig' %}{% endblock %}
+{% block javascripts %}{% include 'BootstrapBundle:Base:js.html.twig' %}{% endblock %}
 </body>
 </html>
