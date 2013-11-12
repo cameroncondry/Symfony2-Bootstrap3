@@ -4,9 +4,9 @@
 
 {% block form_row %}
 {% spaceless %}
-	{% set label_class = (errors|length > 0) ? 'control-label label-warning' : 'control-label' %}
-	<div class="form-group">
-		{{ form_label(form, null, {'label_attr': {'class': {{label_class}}}}) }}
+    {% set error = (errors|length > 0) ? ' text-danger' : '' %}
+	<div class="form-group{{ error }}">
+		{{ form_label(form, null, {'label_attr': {'class': 'control-label'}}) }}
 		{{ form_errors(form) }}
 		{{ form_widget(form, {'attr': {'class': 'form-control'}}) }}
 	</div>
