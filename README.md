@@ -36,6 +36,14 @@ Optionally, update the composer.json file to remove the components root director
 }</pre></dd>
 </dl>
 
+Integration
+-----------
+
+Include the following in your base.html.twig file:
+<pre>
+	{% extends 'CBCBootstrapBundle::base.html.twig' %}
+</pre>
+
 Overwritable Blocks
 -------------------
 
