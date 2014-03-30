@@ -1,7 +1,7 @@
 Symfony2-Bootstrap3
 ===================
 
-BootstrapBundle looks to integrate [Bootstrap 3](http://getbootstrap.com/) with a Symfony2 v2.3+ project. The base implementation hooks into the twig system, overridding the form templates and base html container to use base Bootstrap 3 styles. The Bundle also includes jQuery from a CDN with a local fallback.
+BootstrapBundle looks to integrate [Bootstrap 3](http://getbootstrap.com/) with a Symfony2 v2.4 project. The base implementation hooks into the twig system, overridding the form templates and base html container to use base Bootstrap 3 styles. The Bundle also includes jQuery from a CDN with a local fallback.
 
 Installation
 -------------------
@@ -20,29 +20,6 @@ Add the project to your composer.json and include the Bootstrap template into yo
 	<dd><pre>{% extends 'BootstrapBundle::base.html.twig' %}</pre>
 	</dd>
 </dl>
-
-Optional
--------------------
-
-Optionally, update the composer.json file to remove the components root directory, which is unused by this bundle.
-
-<dl>
-	<dt>/composer.json</dt>
-	<dd><pre>
-{
-	"config": {
-		"component-dir": "vendor/components"
-	}
-}</pre></dd>
-</dl>
-
-Integration
------------
-
-Include the following in your base.html.twig file:
-<pre>
-	{% extends 'CBCBootstrapBundle::base.html.twig' %}
-</pre>
 
 Overwritable Blocks
 -------------------

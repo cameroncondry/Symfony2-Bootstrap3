@@ -1,7 +1,7 @@
 {
     "name": "cbc/symfony2-bootstrap",
     "type": "package",
-    "description": "Integrates Bootstrap 3 with Symfony 2.3+.",
+    "description": "Integrates Bootstrap 3.1 with Symfony 2.4",
     "license": "MIT",
     "authors": [
         {
@@ -9,8 +9,11 @@
             "email": "ccondry2@gmail.com"
         }
     ],
+    "config": {
+        "component-dir": "vendor/components"
+    },
     "require": {
-        "twitter/bootstrap": "3.0.*",
+        "twitter/bootstrap": "3.1.*",
         "components/jquery": "1.10.*"
     },
     "autoload": {
