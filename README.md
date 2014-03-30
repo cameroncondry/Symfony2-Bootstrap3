@@ -15,17 +15,16 @@ Add the project to your composer file.
 	"require": {
 		"cbc/symfony2-bootstrap": "1.1.*"
 	}
-}
-	</pre></dd>
+}</pre></dd>
 </dl>
 
 Add the Bootstrap bundle to AppKernal and include the template.
 
 <dl>
 	<dt>/app/AppKernel.php</dt>
-	<dd>new CBC\Bundle\BootstrapBundle\BootstrapBundle()</dd>
+	<dd><pre>new CBC\Bundle\BootstrapBundle\BootstrapBundle()</pre></dd>
 	<dt>/app/Resources/views/base.html.twig</dt>
-	<dd>{% extends 'BootstrapBundle::base.html.twig' %}</dd>
+	<dd><pre>{% extends 'BootstrapBundle::base.html.twig' %}</pre></dd>
 </dl>
 
 Defined Blocks
