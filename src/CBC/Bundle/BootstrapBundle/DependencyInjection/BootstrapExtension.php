@@ -35,7 +35,7 @@ class BootstrapExtension extends Extension implements PrependExtensionInterface
         $bundles = $container->getParameter('kernel.bundles');
 
         if (!isset($bundles['TwigBundle']) || !isset($bundles['AsseticBundle'])) {
-            throw new \Exception('Missing required TwigBundle and AsseticBundle for PLTWBootstrapBundle.');
+            throw new \Exception('Missing required TwigBundle or AsseticBundle for CBCBootstrapBundle.');
         }
 
         // add the form builder to the twig form resources
