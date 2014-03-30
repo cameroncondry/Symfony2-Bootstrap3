@@ -1,27 +1,34 @@
 Symfony2-Bootstrap3
 ===================
 
-BootstrapBundle looks to integrate [Bootstrap 3](http://getbootstrap.com/) with a Symfony2 v2.4 project. The base implementation hooks into the twig system, overridding the form templates and base html container to use base Bootstrap 3 styles. The Bundle also includes jQuery from a CDN with a local fallback.
+BootstrapBundle looks to integrate [Bootstrap 3](http://getbootstrap.com/) with a Symfony2 v2.4 project. The base implementation hooks into the twig system, overridding the form templates and base html container to use base Bootstrap 3 styles. The Bundle also includes jQuery 1.10.* from a CDN with a local fallback.
 
 Installation
 -------------------
 
-Add the project to your composer.json and include the Bootstrap template into your base template.
+Add the project to your composer file.
 
 <dl>
-	<dt>/composer.json</dt>
+	<dt>composer.json</dt>
 	<dd><pre>
 {
 	"require": {
-		"cbc/symfony2-bootstrap": "1.0.*"
+		"cbc/symfony2-bootstrap": "1.1.*"
 	}
-}</pre></dd>
-	<dt>/app/Resources/views/base.html.twig</dt>
-	<dd><pre>{% extends 'BootstrapBundle::base.html.twig' %}</pre>
-	</dd>
+}
+	</pre></dd>
 </dl>
 
-Overwritable Blocks
+Add the Bootstrap bundle to AppKernal and include the template.
+
+<dl>
+	<dt>/app/AppKernel.php</dt>
+	<dd>new CBC\Bundle\BootstrapBundle\BootstrapBundle()</dd>
+	<dt>/app/Resources/views/base.html.twig</dt>
+	<dd>{% extends 'BootstrapBundle::base.html.twig' %}</dd>
+</dl>
+
+Defined Blocks
 -------------------
 
 <dl>
